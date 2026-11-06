@@ -1,0 +1,200 @@
+تمام، خدي الكود كله متعدل بالرقم الجديد بتاعك `01069621418` 👌
+
+انسخيه كله والصقيه مكان القديم، ودوسي `Ctrl + S`:
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معرض الملك | للسيارات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+body{background:#0B0B0F;color:#fff;overflow-x:hidden}
+header{background:rgba(0,0,0,.85);backdrop-filter:blur(10px);padding:15px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20;border-bottom:1px solid #222}
+header h1{font-size:24px;font-weight:900}
+header h1 span{color:#FFC107}
+header nav a{color:#fff;text-decoration:none;margin:0 10px;font-weight:700}
+.hero{background:url('https://images.unsplash.com/photo-1503376765608-e6c81b3e0f6f?w=1400') center/cover;min-height:420px;display:flex;align-items:flex-end;position:relative;padding:20px 0}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.3))}
+.hero>div{position:relative;z-index:1;padding:20px 5%;width:100%}
+.hero h2{font-size:52px;font-weight:900;line-height:1.1}
+.hero h2 span{color:#FFC107}
+.hero p{color:#ccc;margin:12px 0 20px}
+.hero-img{width:100%;max-width:520px;height:260px;object-fit:cover;border-radius:20px;border:3px solid #FFC107;display:block;margin-top:18px}
+.btn{background:#FFC107;color:#000;padding:13px 28px;border-radius:30px;font-weight:900;text-decoration:none;border:none;cursor:pointer}
+.btn2{background:#fff;color:#000;padding:13px 22px;border-radius:30px;font-weight:700;border:none;cursor:pointer;margin-right:10px}
+.search-bar{background:#15151C;padding:25px 5%;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:sticky;top:65px;z-index:10}
+.search-bar input,.search-bar select{padding:12px 16px;border-radius:30px;border:1px solid #333;background:#222;color:#fff;outline:none;min-width:180px}
+.search-bar input{flex:1}
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:25px 5% 0}
+.filters button{padding:10px 22px;border-radius:25px;border:1px solid #333;background:#1A1A22;color:#fff;cursor:pointer;font-weight:700}
+.filters button.active{background:#FFC107;color:#000;border-color:#FFC107}
+.section{padding:20px 5% 50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;margin-top:20px}
+.card{background:#15151C;border-radius:22px;overflow:hidden;border:1px solid #222;transition:.3s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:#FFC107}
+.card img{width:100%;height:200px;object-fit:cover}
+.badge{position:absolute;top:12px;right:12px;background:#FFC107;color:#000;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:900}
+.badge.new{background:#00C853;color:#fff}
+.card .info{padding:16px}
+.card h4{font-size:19px}
+.card .brand{color:#FFC107;font-size:13px;font-weight:700;margin:4px 0}
+.card .specs{display:flex;gap:12px;color:#aaa;font-size:13px;margin:10px 0;flex-wrap:wrap}
+.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:8px}
+.price{font-size:20px;font-weight:900;color:#fff}
+.price small{font-size:12px;color:#888}
+.add{background:#FFC107;border:none;padding:9px 16px;border-radius:20px;font-weight:900;cursor:pointer}
+.fav{background:#222;color:#fff;border:none;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px}
+.fav.active{color:#FF3860}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:15px;padding:0 5% 30px}
+.stat{background:#15151C;border:1px solid #222;padding:20px;border-radius:20px;text-align:center}
+.stat b{font-size:28px;color:#FFC107;display:block}
+footer{background:#000;text-align:center;padding:25px;color:#888}
+#favBar{position:fixed;bottom:20px;left:20px;background:#FFC107;color:#000;padding:12px 20px;border-radius:30px;font-weight:900;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+@media(max-width:600px){
+.hero h2{font-size:32px}
+header{flex-direction:column;gap:8px}
+.search-bar{top:98px}
+.hero-img{height:180px}
+.btn,.btn2{width:100%;margin:5px 0}
+.price{font-size:17px}
+#favBar{left:10px;right:10px;text-align:center;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>معرض <span>المَلِك 👑</span></h1>
+  <nav><a href="#cars">السيارات</a><a href="#stats">ليه احنا؟</a><a href="#contact">تواصل</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>اركب عربيتك الجديدة<br><span>من غير لف ولا دوخة</span></h2>
+    <p>عربية جاهزة - كاش وتقسيط - ترخيص وفحص مجاني - توصيل لحد البيت</p>
+    <button class="btn" onclick="document.getElementById('cars').scrollIntoView({behavior:'smooth'})">شوف العربيات 🚗</button>
+    <button class="btn2" onclick="filterType('SUV',this)">عربيات SUV</button>
+   
+  </div>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="دور على عربية... اكتب مرسيدس، تويوتا، BMW" onkeyup="applyFilter()">
+  <select id="brandFilter" onchange="applyFilter()">
+    <option value="all">كل الماركات</option>
+    <option>تويوتا</option><option>هيونداي</option><option>كيا</option><option>مرسيدس</option><option>BMW</option><option>أودي</option><option>رينج روفر</option><option>بورشه</option><option>تسلا</option><option>نيسان</option><option>MG</option>
+  </select>
+  <select id="priceFilter" onchange="applyFilter()">
+    <option value="all">كل الأسعار</option>
+    <option value="low">أقل من مليون</option>
+    <option value="mid">من مليون لـ 3 مليون</option>
+    <option value="high">أكتر من 3 مليون</option>
+  </select>
+</div>
+
+<div class="filters">
+  <button class="active" onclick="filterType('all',this)">الكل</button>
+  <button onclick="filterType('SUV',this)">SUV 🚙</button>
+  <button onclick="filterType('سيدان',this)">سيدان</button>
+  <button onclick="filterType('رياضية',this)">رياضية 🏎️</button>
+  <button onclick="filterType('كهرباء',this)">كهرباء ⚡</button>
+  <button onclick="filterType('هاتشباك',this)">هاتشباك</button>
+</div>
+
+<div class="stats" id="stats">
+  <div class="stat"><b>+500</b>عميل سعيد</div>
+  <div class="stat"><b>18</b>عربية جاهزة</div>
+  <div class="stat"><b>0%</b>مقدم تقسيط</div>
+  <div class="stat"><b>5 سنين</b>ضمان</div>
+</div>
+
+<div class="section" id="cars">
+  <h2 style="text-align:center">تشكيلة <span style="color:#FFC107">المعرض</span> - <span id="count">18</span> عربية</h2>
+  <div class="grid" id="carsGrid"></div>
+</div>
+
+<div class="section" id="contact" style="text-align:center;background:#15151C;border-radius:25px;margin:0 5% 40px">
+  <h2>عايز تعاين؟ تعالى المعرض</h2>
+  <p style="color:#aaa;margin:10px 0">طنطا - طريق المحلة | مفتوح يومياً من 10 ص لـ 11 م</p>
+  <br>
+  <a class="btn" href="https://wa.me/201069621418">احجز معاينة على واتساب 📱</a>
+</div>
+
+<div id="favBar">❤️ المفضلة: <span id="favCount">0</span> عربية | دوس على القلب عشان تحفظها</div>
+<footer>© 2026 معرض الملك للسيارات - طنطا ❤️</footer>
+
+<script>
+const cars=[
+ {name:'تويوتا كورولا 2025',brand:'تويوتا',type:'سيدان',price:1450000,year:2025,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=700',tag:'الأكثر مبيعاً'},
+ {name:'تويوتا لاند كروزر',brand:'تويوتا',type:'SUV',price:8500000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=700',tag:'فخامة'},
+ {name:'هيونداي النترا CN7',brand:'هيونداي',type:'سيدان',price:1250000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=700',tag:'new'},
+ {name:'هيونداي توسان 2025',brand:'هيونداي',type:'SUV',price:1950000,year:2025,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=700',tag:'الأكثر مبيعاً'},
+ {name:'كيا سبورتاج',brand:'كيا',type:'SUV',price:2050000,year:2025,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=700',tag:'new'},
+ {name:'كيا سيراتو',brand:'كيا',type:'سيدان',price:1180000,year:2023,km:'22,000',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700',tag:''},
+ {name:'مرسيدس C200 AMG',brand:'مرسيدس',type:'سيدان',price:3850000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=700',tag:'فخامة'},
+ {name:'مرسيدس GLE 450',brand:'مرسيدس',type:'SUV',price:7200000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700',tag:'فخامة'},
+ {name:'BMW 320i M Sport',brand:'BMW',type:'سيدان',price:3450000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=700',tag:'رياضية'},
+ {name:'BMW X5 2024',brand:'BMW',type:'SUV',price:6900000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=700',tag:'فخامة'},
+ {name:'أودي A4',brand:'أودي',type:'سيدان',price:2950000,year:2023,km:'15,000',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=700',tag:''},
+ {name:'رينج روفر فيلار',brand:'رينج روفر',type:'SUV',price:9800000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?w=700',tag:'فخامة'},
+ {name:'بورشه باناميرا',brand:'بورشه',type:'رياضية',price:11200000,year:2023,km:'8,000',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=700',tag:'رياضية'},
+ {name:'تسلا موديل 3',brand:'تسلا',type:'كهرباء',price:2450000,year:2024,km:'0',gear:'كهرباء',img:'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=700',tag:'كهرباء'},
+ {name:'تسلا موديل Y',brand:'تسلا',type:'كهرباء',price:2950000,year:2024,km:'0',gear:'كهرباء',img:'https://images.unsplash.com/photo-1571127236794-81c0bbfe1ce3?w=700',tag:'كهرباء'},
+ {name:'نيسان صني',brand:'نيسان',type:'سيدان',price:750000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=700',tag:'اقتصادية'},
+ {name:'MG ZS 2024',brand:'MG',type:'SUV',price:980000,year:2024,km:'0',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700',tag:'اقتصادية'},
+ {name:'MG 6 - هاتشباك',brand:'MG',type:'هاتشباك',price:890000,year:2023,km:'12,000',gear:'أوتوماتيك',img:'https://images.unsplash.com/photo-1542362567-b07e54358753?w=700',tag:'اقتصادية'},
+];
+let currentType='all';
+let favs=new Set();
+function render(list){
+  const grid=document.getElementById('carsGrid');
+  document.getElementById('count').innerText=list.length;
+  grid.innerHTML='';
+  if(list.length===0){grid.innerHTML='<p style="text-align:center;color:#aaa">مفيش عربية بالمواصفات دي 😔 جرب تغير الفلتر</p>';return;}
+  list.forEach((c,i)=>{
+    grid.innerHTML+=`<div class="card">
+      ${c.tag?`<span class="badge ${c.tag=='new'?'new':''}">${c.tag}</span>`:''}
+      <img src="${c.img}">
+      <div class="info">
+        <div class="brand">${c.brand} • ${c.year} • ${c.type}</div>
+        <h4>${c.name}</h4>
+        <div class="specs"><span>⚙️ ${c.gear}</span><span>📍 ${c.km} كم</span><span>🗓️ ${c.year}</span></div>
+        <div class="price-row"><div class="price">${c.price.toLocaleString()} <small>ج.م</small></div>
+        <div><button class="fav ${favs.has(i)?'active':''}" onclick="toggleFav(${i},this)">♥</button>
+        <button class="add" onclick="window.open('https://wa.me/201069621418?text=عايز ${encodeURIComponent(c.name)}','_blank')">احجزها</button></div></div>
+      </div></div>`;
+  });
+}
+function filterType(type,btn){
+  currentType=type;
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  applyFilter();
+}
+function applyFilter(){
+  const q=document.getElementById('searchInput').value.toLowerCase();
+  const brand=document.getElementById('brandFilter').value;
+  const price=document.getElementById('priceFilter').value;
+  let filtered=cars.filter(c=>{
+    let ok=true;
+    if(currentType!=='all' && c.type!==currentType) ok=false;
+    if(brand!=='all' && c.brand!==brand) ok=false;
+    if(q && !c.name.toLowerCase().includes(q) && !c.brand.toLowerCase().includes(q)) ok=false;
+    if(price==='low' && c.price>=1000000) ok=false;
+    if(price==='mid' && (c.price<1000000 || c.price>3000000)) ok=false;
+    if(price==='high' && c.price<=3000000) ok=false;
+    return ok;
+  });
+  render(filtered);
+}
+function toggleFav(i,btn){
+  if(favs.has(i)){favs.delete(i);btn.classList.remove('active');}
+  else{favs.add(i);btn.classList.add('active');}
+  document.getElementById('favCount').innerText=favs.size;
+}
+render(cars);
+</script>
+</body>
+</html>
